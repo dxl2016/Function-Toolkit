@@ -1,0 +1,9 @@
+Applied ML:
+  layers,
+  hiddlen units
+  learning rates
+  activation functions
+  train/dev/test: preferred train and dev have the same distribution
+  bias and variance (Bayes optimal error)
+  
+  
