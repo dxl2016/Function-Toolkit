@@ -1,4 +1,5 @@
 ### Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization
+### Search/tuning Hyperparameter
 ### Week 1:
   * layers,
   * hiddlen units
@@ -25,6 +26,17 @@
   * gradient check (two-sided epi)
   
 ### Week 2:
+  * mini-batch gradient descent vs batch: vectorization
+  * 1-epoch: 1 pass through training set
+  * if mini-batch size = 1: SGD
+  * smaller dataset (<= 2000)
+  * typical mini-batch sizes (2^6, 2^7, 2^8, 2^9, 2^10)
+  * mini-batch fit in CPU/GPU memory
+  
+  
+  
+  
+  
   
   
   
