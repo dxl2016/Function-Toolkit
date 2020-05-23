@@ -1,4 +1,5 @@
-Applied ML:
+### Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization
+### Week 1:
   layers,
   hiddlen units
   learning rates
@@ -23,6 +24,7 @@ Applied ML:
   
   gradient check (two-sided epi)
   
+### Week 2:
   
   
   
