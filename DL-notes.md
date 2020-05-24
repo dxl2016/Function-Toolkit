@@ -32,7 +32,8 @@
   * smaller dataset (<= 2000)
   * typical mini-batch sizes (2^6, 2^7, 2^8, 2^9, 2^10)
   * mini-batch fit in CPU/GPU memory
-  
+  * epi = 1-beta, (1epi)^(1/epi) = 1/e
+  * EWMA, bias correction
   
   
   
