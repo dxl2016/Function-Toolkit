@@ -1,10 +1,12 @@
 ### Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization
-### Search/tuning Hyperparameter, speed up learning algorithm
+### Search/tuning Hyperparameter, speed up learning algorithm, optimization
 ### Week 1:
-  * layers,
+  * layers
   * hiddlen units
   * learning rates
   * activation functions
+  * mini-batch sizes
+  * learning rate decay
   * train/dev/test: preferred train and dev have the same distribution
 <br/><br/>
   * high bias or/and variance problems (given Bayes optimal error)
@@ -40,8 +42,14 @@
   * the problem of local optima, saddle points
   * problem of plateaus, can make learning rate slow
 <br/><br/>
-### Week 2:
-  
+### Week 3:
+  * alpha is of the most importance
+  * try random values, do not use a grid
+  * use an appropriate scale to pick hyperparameters, random exponent, not random linearly
+  * batch normalization: can we normalize a/z values as to tune w and b faster?
+  * for each mini-batch: x (w1, b1) --> z1 (batch norm beta1 and gamma1) --> z~1 --> a1 = g(z~1) (w2, b2) --> z2 (batch norm beta2 and gamma2) --> z~2 --> a2 ... [beta is not the one for momentum]
+  * z[l] = w[l]a[l-1], calculate z[l]norm, z~[l] = gamma * z[l]norm + beta[l] is to increase non-linearity of the sigmoid fucntion
+  * work with momentum, RMSprop, and Adam to back-prop update parameters
   
   
   
