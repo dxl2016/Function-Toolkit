@@ -1,6 +1,5 @@
 ### Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization
 ### Search/tuning Hyperparameter, speed up learning algorithm
-<br/><br/>
 ### Week 1:
   * layers,
   * hiddlen units
@@ -35,9 +34,13 @@
   * mini-batch fit in CPU/GPU memory
   * epi = 1-beta, (1epi)^(1/epi) = 1/e
   * EWMA, bias correction, use for GD with momentum and learning rate, default beta = 0.9
-  * RMSprop
-  
-  
+  * RMSprop, add epi=10^-8 for squared root stability in the denominator
+  * Adam (adapt momentum estimation) optimization algorithm, alpha needs to be tuned, beta1 = 0.9 (dw), beta2 = 0.999 (dw2), epi = 10^-8
+  * learning rate decay alpha, formulas or manual decay
+  * the problem of local optima, saddle points
+  * problem of plateaus, can make learning rate slow
+<br/><br/>
+### Week 2:
   
   
   
