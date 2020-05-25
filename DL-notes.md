@@ -1,12 +1,13 @@
 ### Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization
-### Search/tuning Hyperparameter
+### Search/tuning Hyperparameter, speed up learning algorithm
+<br/><br/>
 ### Week 1:
   * layers,
   * hiddlen units
   * learning rates
   * activation functions
   * train/dev/test: preferred train and dev have the same distribution
-  
+<br/><br/>
   * high bias or/and variance problems (given Bayes optimal error)
   * bigger network (bias) + more data (variance)
   1. regularization (reduce bias and avoid overfitting): L1 (sparse), L2 (weight decay GD)
@@ -16,15 +17,15 @@
   intuition: keep-prob>0, can't rely on any one feature, so have to spread out weights
   3. data augmentation: generate more data
   4. early stopping: give mid-size w
-  
+<br/><br/>  
   * orthogonalization: two tasks (optimal cost function J + not overfitting)
   * normalizing inputs: use the same rescale to normalize mu and sigma on the training and test datasets
   * to easier and faster optimize and learn w
   * vanishing/exploding gradients (w)
   * weight initialization: ReLU activation functions - sqrt(2/n[l-1]), etc.
-  
+<br/><br/>
   * gradient check (two-sided epi)
-  
+<br/><br/>
 ### Week 2:
   * mini-batch gradient descent vs batch: vectorization
   * 1-epoch: 1 pass through training set
@@ -33,7 +34,8 @@
   * typical mini-batch sizes (2^6, 2^7, 2^8, 2^9, 2^10)
   * mini-batch fit in CPU/GPU memory
   * epi = 1-beta, (1epi)^(1/epi) = 1/e
-  * EWMA, bias correction
+  * EWMA, bias correction, use for GD with momentum and learning rate, default beta = 0.9
+  * RMSprop
   
   
   
