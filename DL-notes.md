@@ -50,9 +50,11 @@
   * for each mini-batch: x (w1, b1) --> z1 (batch norm beta1 and gamma1) --> z~1 --> a1 = g(z~1) (w2, b2) --> z2 (batch norm beta2 and gamma2) --> z~2 --> a2 ... [beta is not the one for momentum]
   * z[l] = w[l]a[l-1], calculate z[l]norm, z~[l] = gamma * z[l]norm + beta[l] is to increase non-linearity of the sigmoid fucntion
   * work with momentum, RMSprop, and Adam to back-prop update parameters
-  
-  
-  
+  * reduce variance shifting around and stablize earlier layers, and make latter layers easier to learn
+  * this has a slight regularization effect, each mini-batch is scaled by the mean/variance computed on just that mini-batch
+  * a larger mini-batch will reduce that regularization effect
+  * batch norm at a test time: use EWMA or running mean/variance of the entire training set
+  * softmax regression and classifier
   
   
 
