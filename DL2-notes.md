@@ -15,9 +15,10 @@
   * pooling: max poolig, average pooling; max pooling usually uses no padding, no parameter back prop to learn through pooling, fix function
   * ex. conv layer + pooling + flatten + FC layer + softmax unit + output
   * activation sizes decrease, as # of parameters increase
-  * why conv: 1. sharing parameters 2. sparsity of connections
+  * why conv: 1. sharing parameters 2. sparsity of connections; avoid overfitting and better capture translations and variations
   <br><br/>
   ### Week 2:
+  * 
   
   
   
