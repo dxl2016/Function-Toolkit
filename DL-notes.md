@@ -1,5 +1,5 @@
 ### Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization
-### Search/tuning Hyperparameter, speed up learning algorithm, optimization
+### Search/tuning hyperparameter, speed up learning algorithm, optimization
 ### Week 1:
   * layers
   * hiddlen units
@@ -55,12 +55,8 @@
   * a larger mini-batch will reduce that regularization effect
   * batch norm at a test time: use EWMA or running mean/variance of the entire training set
   * softmax regression and classifier
+  * sigmoid vs relu vs tanh
+  * tf
   
   
   
-  
-  
-  
-
-
-
