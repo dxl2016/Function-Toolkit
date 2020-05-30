@@ -1,4 +1,4 @@
-def print_binary(k):
+def printBinary(k):
   end = 1 << k   
   for i in range(end): 
     arg = bin(i)[2:].zfill(k)
