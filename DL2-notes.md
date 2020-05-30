@@ -1,5 +1,5 @@
 ### Convolutional Neural Networks
-### ConvNets, Deep convolutional models, image recognition/classfication, object detections
+### ConvNets, Deep convolutional models, image recognition/classification, object detections
 ### Machine learning, deep learning, cv, nlp
 ### Two sources of knowledge: 1. labeled data (x,y) supervised learning 2. hand-engineered features/network architecture/other components
 ### Week 1:
@@ -15,7 +15,7 @@
   * padding, flatten, fit into logistic/softmax regression, etc.
   * layers: conv, pool, fc
   * output size: (batch size, width, height, # of channels)
-  * pooling: max poolig, average pooling; **max pooling usually uses no padding, no parameter back prop to learn through pooling, fix function**
+  * pooling: max pooling, average pooling; **max pooling usually uses no padding, no parameter back prop to learn through pooling, fix function**
   * ex. conv layer (each can be deep, multiple filters) + pooling + flatten + FC layer + softmax unit + output
   * usually count as layers if have weights (parameters)
   * activation sizes decrease, as # of parameters increase
@@ -25,7 +25,7 @@
   * LeNet, AlexNet, VGG, etc.
   * ResNets: residual blocks, main paths vs short cuts/skip connections, help vanishing/exploding gradient problems
   * preserve layer dimensions/sizes, make adjustments using vectors Ws if necessary
-  * inception network: bottleneck layer, channel concat, some side branches make predictions in the hiddlen units and prevent from overfitting, stack up multiple modules to become a network
+  * inception network: bottleneck layer, channel concat, some side branches make predictions in the hidden units and prevent from overfitting, stack up multiple modules to become a network
   * transfer learning: ImageNets, pre-trained weights, freeze early layers
   * data augmentation: 
     1. mirroring, random cropping, rotation, shearing, local warping, etc.
@@ -35,10 +35,20 @@
     2. multi-crop at test time and average the outputs
   * architecture of networks in the lit, pre-trained + fine tune
 <br><br/>
-  ### Week 3:
-  
-  
-  
+### Week 3:
+  * object localization: 1 object vs multiple objects (of different categories)
+  * define label y (a vector): (bounding box) bx, by, bH, bW, (class) c, **0<bx, by<1, bH and bW can be > 1 (outside the grid cell)**
+  * ex: landmark detection
+  * object detection: **sliding windows detection**
+  * sharing computation, **convolution implementation of sliding windows**
+  * bounding box predictions: **YOLO algorithm, output volumes are n_sub_bgrid * n_sub_bgrid * label_y_dim, only look up midpoint coordinates of the objects** ex, FC layer 400 to (1, 1, 400) 
+  * intersection over union (>=0.5, >=0.6, >=0.7)
+  * non-max suppression: ensure one detection per object, discard pc<0.5, pick the one box with the max pc as a prediction, filter out boxes with IoU>=0.5
+  * anchor boxes, (grid cell, anchor box) pair, look at the highest IoU, **n_sub_bgrid * n_sub_bgrid * label_y_dim * anchor_box_num**, better at detecting specialized objects, can use k-mean to automatically select anchor box sizes, ex. (19 * 19 * 5 anchor boxes * 8 label dim)
+  * region proposals: R-CNN, segmentation algorithm to narrow down num of blobs
+<br><br/>
+### Week 4:
+  * 
   
   
   
