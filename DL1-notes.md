@@ -2,7 +2,7 @@
 ### Search/tuning hyperparameter, speed up learning algorithm, optimization
 ### Week 1:
   * layers
-  * hiddlen units
+  * hidden units
   * learning rates
   * activation functions
   * mini-batch sizes
@@ -13,8 +13,8 @@
   * bigger network (bias) + more data (variance)
     1. regularization (reduce bias and avoid overfitting): L1 (sparse), L2 (weight decay GD)
     ex: high lambda: a lot of w close to 0, simpler/smaller NN or nearly linear activation functions, 
-      leadning to less overfitting 
-    2. droupout regularization: inverted dropout (last step: rescale to keep the same expectation values of activation functions)
+      leading to less overfitting 
+    2. dropout regularization: inverted dropout (last step: rescale to keep the same expectation values of activation functions)
     intuition: keep-prob>0, can't rely on any one feature, so have to spread out weights
     3. data augmentation: generate more data
     4. early stopping: give mid-size w
@@ -48,9 +48,9 @@
   * use an appropriate scale to pick hyperparameters, random exponent, not random linearly
   * batch normalization: can we normalize a/z values as to tune w and b faster?
   * for each mini-batch: x (w1, b1) --> z1 (batch norm beta1 and gamma1) --> z~1 --> a1 = g(z~1) (w2, b2) --> z2 (batch norm beta2 and gamma2) --> z~2 --> a2 ... [beta is not the one for momentum]
-  * z[l] = w[l]a[l-1], calculate z[l]norm, z~[l] = gamma * z[l]norm + beta[l] is to increase non-linearity of the sigmoid fucntion
+  * z[l] = w[l]a[l-1], calculate z[l]norm, z~[l] = gamma * z[l]norm + beta[l] is to increase non-linearity of the sigmoid function
   * work with momentum, RMSprop, and Adam to back-prop update parameters
-  * reduce variance shifting around and stablize earlier layers, and make latter layers easier to learn
+  * reduce variance shifting around and stabilize earlier layers, and make latter layers easier to learn
   * this has a slight regularization effect, each mini-batch is scaled by the mean/variance computed on just that mini-batch
   * a larger mini-batch will reduce that regularization effect
   * batch norm at a test time: use EWMA or running mean/variance of the entire training set
