@@ -48,7 +48,7 @@
   * region proposals: R-CNN, segmentation algorithm to narrow down num of blobs
 <br><br/>
 ### Week 4:
-  * 
+  * an application: face recognition, live detection, supervised learning
   
   
   
