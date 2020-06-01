@@ -1,6 +1,6 @@
 ### Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization
 ### Search/tuning hyperparameter, speed up learning algorithm, optimization
-### Week 1:
+### Week 1: Practical aspects of Deep Learning
   * layers
   * hidden units
   * learning rates
@@ -27,7 +27,7 @@
 <br/><br/>
   * gradient check (two-sided epi)
 <br/><br/>
-### Week 2:
+### Week 2: Optimization algorithms
   * mini-batch gradient descent vs batch: vectorization
   * 1-epoch: 1 pass through training set
   * if mini-batch size = 1: SGD
@@ -42,7 +42,7 @@
   * the problem of local optima, saddle points
   * problem of plateaus, can make learning rate slow
 <br/><br/>
-### Week 3:
+### Week 3: Hyperparameter tuning, Batch Normalization and Programming Frameworks
   * alpha is of the most importance
   * try random values, do not use a grid
   * use an appropriate scale to pick hyperparameters, random exponent, not random linearly
