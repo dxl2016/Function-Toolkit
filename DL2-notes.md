@@ -2,7 +2,7 @@
 ### ConvNets, Deep convolutional models, image recognition/classification, object detections
 ### Machine learning, deep learning, cv, nlp
 ### Two sources of knowledge: 1. labeled data (x,y) supervised learning 2. hand-engineered features/network architecture/other components
-### Week 1:
+### Week 1: Foundations of Convolutional Neural Networks
   * cv: image classification, object detection, neural style transfer
   * RGB channels
   * conv filter/kernel, size is usually odd, better to have central pixel, 3*3, 5*5
@@ -21,7 +21,7 @@
   * activation sizes decrease, as # of parameters increase
   * why conv: 1. sharing parameters 2. sparsity of connections; avoid overfitting and better capture translations and variations
 <br><br/>
-  ### Week 2:
+  ### Week 2: Deep convolutional models: case studies
   * LeNet, AlexNet, VGG, etc.
   * ResNets: residual blocks, main paths vs short cuts/skip connections, help vanishing/exploding gradient problems
   * preserve layer dimensions/sizes, make adjustments using vectors Ws if necessary
@@ -35,7 +35,7 @@
     2. multi-crop at test time and average the outputs
   * architecture of networks in the lit, pre-trained + fine tune
 <br><br/>
-### Week 3:
+### Week 3: Object detection
   * object localization: 1 object vs multiple objects (of different categories)
   * define label y (a vector): (bounding box) bx, by, bH, bW, (class) c, **0<bx, by<1, bH and bW can be > 1 (outside the grid cell)**
   * ex: landmark detection
@@ -49,6 +49,21 @@
 <br><br/>
 ### Week 4:
   * an application: face recognition, live detection, supervised learning
+  * face verification vs face recognition
+  * one-shot learning
+  * encoding image representation/similarity: Siamese network, DeepFace
+  * triplet loss (Anchor, Positive, Negative), add margin alpha, FaceNet
+  * face verification and binary classification, similarity function (ex. chi-sq) and logistic regression
+  * pre-compute image encodings, save computation costs
+  * neural style transfer
+  * deep ConvNets learning
+  * neural style transfer cost function: use GD to min J(G) (C: content, S: style, G: generated), J(G) = alpha * J(C, G) + beta * J(S, G)
+  * content cost function: too shallow < layer l < too deep, use pre-trained ConvNet (ex. VGG network)
+  * measure similarity: J(C, G) = norm(a[l][C] - a[l][G]), element-wise sum-of-sq differences
+  * style cost function: define style as correlation between activations across channels (# of channels is a lot in deep learning),nH, nW, nC, correlation gives high-level texture components yes/no occur in a part of image
+  * style matrix (gram matrix G): a[i,j,k][l]; style matrix G[l] in shape of nC * nC
+  * G[l][k,k'] = sum of sum of a[i,j,k][l] * a[i,j,k'][l] (non-normalized cross-covariance), apply for both S and G
+  * J(S, G) = norm(G[l][S] - G[l][G]), usually adjusted by 1/(2nH * nW * nC)^2
   
   
   
