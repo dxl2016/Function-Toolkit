@@ -1,5 +1,5 @@
 ### Convolutional Neural Networks
-### ConvNets, Deep convolutional models, image recognition/classification, object detections
+### ConvNets, deep convolutional models, image recognition/classification, object detections
 ### Machine learning, deep learning, cv, nlp
 ### Two sources of knowledge: 1. labeled data (x,y) supervised learning 2. hand-engineered features/network architecture/other components
 ### Week 1: Foundations of Convolutional Neural Networks
@@ -63,8 +63,9 @@
   * style cost function: define style as correlation between activations across channels (# of channels is a lot in deep learning),nH, nW, nC, correlation gives high-level texture components yes/no occur in a part of image
   * style matrix (gram matrix G): a[i,j,k][l]; style matrix G[l] in shape of nC * nC
   * G[l][k,k'] = sum of sum of a[i,j,k][l] * a[i,j,k'][l] (non-normalized cross-covariance), apply for both S and G
-  * J(S, G) = norm(G[l][S] - G[l][G]), usually adjusted by 1/(2nH * nW * nC)^2
-  
+  * J(S, G) = norm(G[l][S] - G[l][G]), usually adjusted by 1/(2nH * nW * nC)^2, can also apply a multiplier lambda for each layer
+  * 1D and 3D generalization: ConvNets, but RNN, LSTM, etc are specific for sequence data
+  * 3D applications: CT scans, movies, etc.
   
   
   
