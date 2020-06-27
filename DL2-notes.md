@@ -47,7 +47,7 @@
   * anchor boxes, (grid cell, anchor box) pair, look at the highest IoU, **n_sub_bgrid * n_sub_bgrid * label_y_dim * anchor_box_num**, better at detecting specialized objects, can use k-mean to automatically select anchor box sizes, ex. (19 * 19 * 5 anchor boxes * 8 label dim)
   * region proposals: R-CNN, segmentation algorithm to narrow down num of blobs
 <br><br/>
-### Week 4:
+### Week 4: Special applications: face recognition & neural style transfer
   * an application: face recognition, live detection, supervised learning
   * face verification vs face recognition
   * one-shot learning
