@@ -42,7 +42,7 @@
   * the problem of local optima, saddle points
   * problem of plateaus, can make learning rate slow
 <br/><br/>
-### Week 3: Hyperparameter tuning, Batch Normalization and Programming Frameworks
+### Week 3: Hyperparameter tuning, batch normalization and programming frameworks
   * alpha is of the most importance
   * try random values, do not use a grid
   * use an appropriate scale to pick hyperparameters, random exponent, not random linearly
