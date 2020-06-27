@@ -2,7 +2,7 @@
 ### ConvNets, deep convolutional models, image recognition/classification, object detections
 ### Machine learning, deep learning, cv, nlp
 ### Two sources of knowledge: 1. labeled data (x,y) supervised learning 2. hand-engineered features/network architecture/other components
-### Week 1: Foundations of Convolutional Neural Networks
+### Week 1: Foundations of convolutional neural networks
   * cv: image classification, object detection, neural style transfer
   * RGB channels
   * conv filter/kernel, size is usually odd, better to have central pixel, 3*3, 5*5
