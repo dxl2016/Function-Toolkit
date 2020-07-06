@@ -8,3 +8,8 @@
 8.	ensemble learning (bagging, boosting, and stacking)
 9.	representation learning, feature learning
 10.	adversarial machine learning
+
+* sequence models on temporal data
+* recurrent NNs: LSTMs, GRUs and Bidirectional RNNs
+* NLP & word embeddings: NLP with deep learning is an important combination, using word vector representations and embedding layers
+* sequence models & attention mechanism
