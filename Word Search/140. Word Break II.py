@@ -5,28 +5,26 @@ class Solution(object):
         :type wordDict: Set[str]
         :rtype: List[str]
         """
-        def dfs(s, memo):
+        def dfs(s, stack):
+            print(stack)
             if not s:
                 return []
-            if s in memo:
-                return memo[s]
+            if s in stack:
+                return stack[s]
             
             res = []
             for word in wordDict:
-                if not s.startswith(word):
-                    continue
-                if len(word) == len(s):
-                    res.append(word)
-                else:
-                    resultOfTheRest = dfs(s[len(word):], memo)
-                    for item in resultOfTheRest:
-                        item = word + ' ' + item
-                        res.append(item)
-            memo[s] = res
-            # print(memo)
-
+                if s.startswith(word):
+                    if len(s) == len(word):
+                        res.append(word)
+                    else:
+                        rest = dfs(s[len(word):], stack)
+                        for each in rest:
+                            res.append(word + " " + each)
+            
+            stack[s] = res
             return res
     
         return dfs(s, {})
-    
+
     
